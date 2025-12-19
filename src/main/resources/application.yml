@@ -1,0 +1,40 @@
+spring:
+  config:
+    import: optional:file:./config/setting.properties
+  main:
+    banner-mode: off
+  servlet:
+    multipart:
+      max-file-size: 51200MB
+      max-request-size: 51200MB
+  jwt:
+    secret: DSAFIWEPAFJSDPIFAWEPIOFwepicvjdsaVEWIOPVJDSPIOVawdevpioajdvVAFDSVOPWBVEBASJGFRSJRT
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: ${db-url}
+    username: ${db-username}
+    password: ${db-password}
+  devtools:
+    restart:
+      enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        show_sql: ${show-sql}
+        format_sql: ${format-sql}
+logging:
+  level:
+    root: ${main-info-log}
+    org.springframework.web.servlet.resource: ${resource-log}
+    org.springframework.security: ${security-log}
+    org.springframework.web: ${web-log}
+file:
+  upload-dir: ${image-dir}
+  download-url: ${image-addr}
+
+setting:
+  allow-origin: ${allow-origin}
+server:
+  port: ${port}
