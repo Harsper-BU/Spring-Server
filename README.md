@@ -1,3 +1,33 @@
+# How to Run
+jdk-17 설치
+```
+$ curl -s "https://get.sdkman.io" | bash
+```
+```
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+```
+가능한 버전 확인 
+```
+sdk list java
+```
+가능한 버전으로 설치
+```
+sdk install java 17.0.1-librca
+```
+설치 확인
+```
+java --version
+```
+이 프로젝트로 경로를 옮긴 후 빌드
+```
+./gradlew build -x test
+```
+빌드된 결과물은 프로젝트루트/build/libs/프로젝트이름.jar 로 생성됩니다. (생성된 Snatshot 버전은 사용하지 않습니다.  
+해당 파일 실행 
+```
+java -jar 파일이름.jar
+```
+
 ## Spring Boot 서버
 `/config/settings.properties`에서 기본 설정이 가능합니다.
 
