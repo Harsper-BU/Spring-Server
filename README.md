@@ -18,7 +18,7 @@ sdk install java 17.0.1-librca
 ```
 java --version
 ```
-이 프로젝트로 경로를 옮긴 후 빌드
+이 프로젝트로 경로를 이동한 후 빌드 실행
 ```
 ./gradlew build -x test
 ```
